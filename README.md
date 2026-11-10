@@ -2,15 +2,17 @@
 
 ## Overview
 
-This project explores how to estimate π using random sampling. Imagine a square with sides of length 1 and a quarter circle of radius 1 inside it. For each randomly generated point \((x, y)\), we check whether it falls inside the quarter circle using \(x^2 + y^2 \leq 1\).
+This project explores how to estimate π using random sampling. Imagine a square with sides of length 1 and a quarter circle of radius 1 inside it. For each randomly generated point $(x, y)$, we check whether it falls inside the quarter circle using $x^2 + y^2 \leq 1$.
 
-The quarter circle covers \(π/4\) of the square’s area. So if \(K\) out of \(N\) points fall inside it, we can estimate π with:
+The quarter circle covers $\pi/4$ of the square’s area. So if $K$ out of $N$ points fall inside it, we can estimate π with:
 
-\[
-\hat{π} = 4\frac{K}{N}
-\]
+$$
+\hat{\pi} = 4\frac{K}{N}
+$$
 
 The main question is how the estimate changes as we use more points. We’ll run the simulation several times at different point counts, compare each estimate with π, and look at how much the results vary between runs. Because the points are random, a larger sample may improve the estimate overall, but it does not guarantee that every run will be closer to π.
+
+The notebook compares 100, 1,000, 10,000, and 100,000 points, with 200 runs at each size. It reports the mean estimate, mean absolute error, and observed and theoretical standard deviations. It also compares the Monte Carlo estimates with an estimate from the midpoint rule.
 
 ## Project structure
 
@@ -51,3 +53,4 @@ If you prefer JupyterLab, activate the environment and run:
 ```bash
 jupyter lab
 ```
+
